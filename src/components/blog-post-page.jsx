@@ -1,8 +1,12 @@
 import styles from "../../styles/BlogPage.module.css";
-import md from 'markdown-it';
-
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from "remark-gfm";
+import rehypeRaw from 'rehype-raw';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark as colorTheme } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function BlogPostPage({post_data}) {
+
   return (
     <>
       <div className={styles.BlogReadPage}>
@@ -29,7 +33,29 @@ export default function BlogPostPage({post_data}) {
         </div>
 
         <div className={styles.BlogPostContent}>
-            <div dangerouslySetInnerHTML={{ __html: md().render(post_data.content) }} />
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
+                  return !inline && match ? (
+                    <SyntaxHighlighter
+                      children={String(children).replace(/\n$/, "")}
+                      language={match[1]}
+                      style={colorTheme}
+                      {...props}
+                    />
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+              className={styles.reactMarkDown}
+              children={post_data.content}
+            />
         </div>
       </div>
     </>

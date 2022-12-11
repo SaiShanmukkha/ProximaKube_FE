@@ -5,13 +5,12 @@ export async function getServerSideProps(context) {
   // Fetch data from external API
   const res = await fetch(`http://localhost:8000/api/posts/${context.params.slug}`)
   const post_data = await res.json()
-  const data = post_data
 
-  return { props: { post_data, data } }
+  return { props: { post_data } }
 }
 
 
-export default function BlogPage({post_data, data}) {
+export default function BlogPage({post_data}) {
  
   return (
     <>

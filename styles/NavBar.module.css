@@ -1,23 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'); 
+
 .NavBar{
-    /* background-color: green; */
+    background-color: black;
+    cursor: pointer;
     width: 100%;
     min-width: 200px;
-    height: 5rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
 }
 
 .logo{
-    min-width: 45px;
-    min-height: 45px;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .LogoTitle{
     margin-left: 10px;
-    font-size: xx-large;
-    font-weight: 900;
+    color: white;
+    font-family: 'Shrikhand';
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 800;
 }
 

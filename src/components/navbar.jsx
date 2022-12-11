@@ -1,11 +1,17 @@
 import styles from "../../styles/NavBar.module.css";
 
+export default function NavBar({router}) {
+  const onclickAction = () => {
+    router.push({
+      pathname: `/`,
+      query: {},
+    });
+  };
 
-export default function NavBar() {
   return (
-    <div className={styles.NavBar}>
-      <img src={'/favicon.ico'} className={styles.logo} width={'45px'} height={'45px'}/>
-      <div className={styles.LogoTitle}>SSS Proxima</div>
+    <div className={styles.NavBar} onClick={onclickAction}>
+      <img src={'/logo.png'} className={styles.logo} width={'45px'} height={'45px'}/>
+      <div className={styles.LogoTitle}>ProximaKube</div>
     </div>
   );
 }

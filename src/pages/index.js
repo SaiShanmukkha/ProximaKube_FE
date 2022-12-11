@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import BlogPostGrid from '../components/blog-post-grid.jsx'
 import styles from "../../styles/Home.module.css";
@@ -14,7 +13,6 @@ export async function getServerSideProps() {
 }
 
 export default function Index(props) {
-  const router = useRouter()
   return (
     <>
       <Head>
@@ -23,7 +21,7 @@ export default function Index(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <BlogPostGrid posts={props.data} router={router} />
+        <BlogPostGrid posts={props.data} router={props.router} />
       </div>
     </>
   );

@@ -1,7 +1,9 @@
+
 .BlogReadPage{
-    max-width: 1080px;
+    max-width: 820px;
     margin: auto;
     padding: 1rem;
+    color: rgb(53, 54, 54);
 }
 
 .blogPostHeadBlock{
@@ -10,14 +12,15 @@
 
 .postImageBlock{
     width: 100%;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
 }
 
 .postImage{
-    border-radius: 2rem;
-    width: 95%;
-    min-height: 50%;
+    border-radius: 12px;
+    width: 70%;
+    min-height: 30%;
+    max-height: 40%;
 }
 
 .blogTitle{
@@ -77,8 +80,27 @@
     color: rgb(169, 190, 239);
 }
 
-.BlogPostContent{
-    color: rgb(180, 182, 185);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.reactMarkDown{
+    font-family: 'Tahoma';
+    font-weight: 500;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.reactMarkDown hr{
+    border: 2px dashed black;
+}
+
+.reactMarkDown h1,.reactMarkDown h2, .reactMarkDown h3,.reactMarkDown h4,.reactMarkDown h5,.reactMarkDown h6{
+    color: black;
+}
+
+.reactMarkDown a{
+    color: blueviolet;
+}
+
+.reactMarkDown a:hover{
+    text-decoration: underline;
 }
 
