@@ -1,129 +1,206 @@
+
+
+/* React Default CSS */
+
 .container {
   padding: 0 2rem;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+
+.grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-auto-rows: auto;
+  row-gap: 0.1rem;
+  column-gap: 0.1rem;
+  justify-content: stretch;
+  align-items: flex-start;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+/* Card Animation */
+
+.borderAnimate{
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        margin: 0.5rem;
+        align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.borderAnimate:hover{
+      /* transform: translateY(-0.5rem); */
+      transition: 0.5s all linear;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+
+.borderAnimate:hover::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    border-radius: 10px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+
+.borderAnimate::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    inset: 3px;
+    border-radius: 10px;
 }
 
-.title,
-.description {
-  text-align: center;
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
+/* Home Blog Posts */
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.postCard{
+    display: flex;
     flex-direction: column;
-  }
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.1rem;
+    overflow: hidden;
+    z-index: 1;
+    cursor: grab;
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.postCard:hover h3{
+  color: rgb(8, 134, 134);
+  transition: 0.5s all linear;
+}
+
+.postCard:hover .postReadTime{
+    color: rgb(29, 197, 231);
+    transition: 0.1s all linear;
+}
+
+
+.postImage{
+    width: 100%;
+    max-height: 15rem;
+}
+
+.postCardBody{
+    padding: 0.2rem 0.8rem;
+    background-color: aliceblue;
+}
+
+.postCardBody h3{
+    font-family: sans-serif, serif;
+}
+
+.postDate{
+    font-size: smaller;
+    margin: 0.4rem 0rem;
+    color: rgb(45, 112, 117);
+}
+
+.postDescription{
+    margin: 0.2rem 0rem;
+    min-height: 2.5rem;
+    color: rgb(71, 69, 69);
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.postTags{
+    margin: 0.2rem 0rem;
+    min-height: 2rem;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.postTags span{
+    padding: 5px 5px;
+    font-size: small;
+    margin: 3px;
+    border-radius: 8px;
+    border: 1px solid rgb(236, 236, 129);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.postAction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    margin: 1rem 0rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.postReadTime{
+    display: inline;
+    color: #000;
+    font-weight: 500;
+    font-size: small;
+}
+
+.postReadbtn{
+    display: inline;
+    border: 1.5px solid rgb(15, 101, 101);
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: black;
+    font-weight: 600;
+    font-size: small;
+    background: linear-gradient(to left, transparent 50%, rgb(4, 112, 112) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    cursor: pointer;
+}
+
+.postReadbtn:hover{
+    background-position: left;
+    color: white;
+}
+
+.aws{
+    background-color: rgb(136, 91, 7);
+    color: white;
+}
+
+.python{
+    background-color: rgb(33, 59, 211);
+    color: yellow;
+}
+
+.boto3{
+    background-color: rgb(127, 59, 11);
+    color: white;
+}
+
+.react{
+    background-color: black;
+    color: aqua;
 }

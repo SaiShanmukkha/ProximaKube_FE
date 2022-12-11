@@ -1,0 +1,17 @@
+.footerWrapper{
+    padding: 10px;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mainTitle{
+    color: rgb(0, 16, 243);
+    margin: 10px;
+}

@@ -1,0 +1,84 @@
+.BlogReadPage{
+    max-width: 1080px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.blogPostHeadBlock{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif ;
+}
+
+.postImageBlock{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.postImage{
+    border-radius: 2rem;
+    width: 95%;
+    min-height: 50%;
+}
+
+.blogTitle{
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 700;
+}
+
+
+.blogPostPubDate{
+    color: rgb(80, 80, 81);
+    font-weight: 500;
+    margin: 0.5rem;
+}
+
+.postTags{
+    margin: 0.2rem 0rem;
+    min-height: 2rem;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.postTags span{
+    padding: 5px 5px;
+    font-size: small;
+    margin: 3px;
+    border-radius: 8px;
+    border: 1px solid rgb(236, 236, 129);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aws{
+    background-color: rgb(136, 91, 7);
+    color: white;
+}
+
+.python{
+    background-color: rgb(33, 59, 211);
+    color: yellow;
+}
+
+.boto3{
+    background-color: rgb(127, 59, 11);
+    color: white;
+}
+
+.react{
+    background-color: black;
+    color: aqua;
+}
+
+.readTime{
+    margin: 10px;
+    color: rgb(169, 190, 239);
+}
+
+.BlogPostContent{
+    color: rgb(180, 182, 185);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

@@ -1,0 +1,23 @@
+.NavBar{
+    /* background-color: green; */
+    width: 100%;
+    min-width: 200px;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    min-width: 45px;
+    min-height: 45px;
+}
+
+.LogoTitle{
+    margin-left: 10px;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
