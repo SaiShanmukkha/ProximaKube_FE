@@ -21,7 +21,9 @@ export default function Index(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <BlogPostGrid posts={props.data} router={props.router} />
+        <div className={styles.main}>
+          <BlogPostGrid posts={props.data} router={props.router} />
+        </div>
       </div>
     </>
   );

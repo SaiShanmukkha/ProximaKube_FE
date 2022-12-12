@@ -27,21 +27,16 @@
 }
 
 .searchBarBlock{
-    border-radius: 50px;
-}
-
-.searchBar{
-    border: 2px solid white;
-    padding: 0.5rem;
-    border-radius: 15px;
-    padding: 0px;
-    background-color: white;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
 }
 
 .searchIcon{
     background-color: #8f06ea;
     font-size: larger;
-    
     color: white;
 }
 
@@ -50,6 +45,7 @@
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
+    padding: 8px;
 }
 
 .searchInput:focus{

@@ -1,6 +1,5 @@
 import styles from "../../styles/NavBar.module.css";
 import { AiOutlineSearch } from "react-icons/ai";
-import { MdOutlineClear } from "react-icons/md";
 
 export default function NavBar({router}) {
   const onclickAction = () => {
@@ -18,13 +17,10 @@ export default function NavBar({router}) {
           <div className={styles.LogoTitle}>ProximaKube</div>
         </div>
 
-        <div className={styles.searchBarBlock}>
-          <div className={styles.searchBar}>
+        {/* <div className={styles.searchBarBlock}>
             <AiOutlineSearch className={styles.searchIcon} />
             <input className={`${styles.searchInput}`} type="text" placeholder="Search here" />
-            <MdOutlineClear />
-          </div>
-        </div>
+        </div> */}
 
         <div className={`${styles.NavMenu} ${styles.noselect}`}>
           <ul>

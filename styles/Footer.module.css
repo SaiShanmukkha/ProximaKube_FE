@@ -3,44 +3,47 @@
     border: solid 5px #000;
     border-color: #000 transparent transparent transparent;
     background-color: black;
-    height: 230px;
+    min-height: 200px;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  }
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 .footerBlock{
-    display: grid;
-    column-gap: 5px;
-    row-gap: 5px;
-    grid-auto-columns: 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    'one two three'
-    'one two three'
-    'one two three'
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .footerTitleCard{
-    border: 2px solid white;
     color: white;
     padding: 10px;
 }
 
 .footerNavigCard{
-    border: 2px solid white;
     color: white;
     padding: 10px;
 }
 
 .footerSubscribeCard{
-    border: 2px solid white;
     color: white;
     padding: 10px;
 }
@@ -57,7 +60,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .logo{
@@ -75,3 +78,56 @@
     line-height: 2;
     font-size: x-large;
 }
+
+.titleContent{
+    font-style: italic;
+    color: rgb(8, 172, 104);
+}
+
+.NavigLinks{
+    text-align: start;
+}
+
+.NavigLinks h3{
+    color: rgb(183, 179, 179);
+}
+
+.NavigLinks ul{
+    padding: 0;
+}
+
+.NavigLinks ul li{
+    list-style: none;
+    color: rgb(8, 172, 104);
+    font-weight: 600;
+}
+
+.subscribe h3{
+    color: rgb(183, 179, 179);
+}
+
+.subscribe input{
+    padding: 5px;
+    outline: #d507ba;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #8007d0;
+    margin: 0;
+}
+
+.subscribe button{
+    background-color: #8007d0;
+    border: 2px solid #8007d0;
+    color: white;
+    font-weight: 700;
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.copyRight{
+    padding-top: 10px;
+    color: rgb(177, 176, 176);
+}
+

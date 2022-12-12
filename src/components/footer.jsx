@@ -18,8 +18,8 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerNavigCard}>
-            <div className="NavigLinks">
-              <h2>Important Links</h2>
+            <div className={styles.NavigLinks}>
+              <h3>Important Links</h3>
               <ul>
                 <li>Home</li>
                 <li>About</li>
@@ -29,15 +29,16 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSubscribeCard}>
-            <div className="Subscribe">
-              <h2>Get Notification</h2>
-              <input type="text" />
+            {/* <div className={styles.subscribe}>
+              <h3>Get Notification</h3>
+              <input type="email" placeholder="Enter email.." />
               <button>subscribe</button>
-            </div>
-            <div className="copyRight">
+            </div> */}
+            <div className={styles.copyRight}>
               <span>@{year} ProximaKube. All rights reserved.</span>
             </div>
           </div>
+
         </div>
     </div>
   );
