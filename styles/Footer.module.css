@@ -1,4 +1,47 @@
 .footerWrapper{
+    padding: 10px; 
+    border: solid 5px #000;
+    border-color: #000 transparent transparent transparent;
+    background-color: black;
+    height: 230px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.footerBlock{
+    display: grid;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-auto-columns: 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    'one two three'
+    'one two three'
+    'one two three'
+}
+
+.footerTitleCard{
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+.footerNavigCard{
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+.footerSubscribeCard{
+    border: 2px solid white;
+    color: white;
     padding: 10px;
 }
 
@@ -10,8 +53,25 @@
     justify-content: center;
 }
 
+.logoSection{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.mainTitle{
-    color: rgb(0, 16, 243);
-    margin: 10px;
+.logo{
+    min-width: 20px;
+    min-height: 20px;
+    background-image: linear-gradient(to right, #072084, #8007d0, #d507ba);
+    border-radius: 50%;
+}
+
+.LogoTitle{
+    margin-left: 5px;
+    color: rgb(183, 179, 179);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    line-height: 2;
+    font-size: x-large;
 }
