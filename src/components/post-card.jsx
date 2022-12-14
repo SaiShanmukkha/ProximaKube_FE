@@ -1,23 +1,17 @@
 import styles from "../../styles/Home.module.css";
-import Image from 'next/image'
+
 
 export default function PostCard({ post_data, router }) {
 
   return (
-    <div className={`${styles.borderAnimate}`}>
       <div className={styles.postCard}>
-        <img
-          className={styles.postImage}
-          src={post_data.image}
-          alt="Blog-Pic"
-        />
         <div className={styles.postCardBody}>
           <h3>{post_data.title}</h3>
           <p className={styles.postDate}>September 16, 2022</p>
-          {/* <p className={styles.postDescription}>
+          <p className={styles.postDescription}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Praesentium, repellendus?
-          </p> */}
+          </p>
           <div className={styles.postTags}>
             <span className={styles.aws}>#aws</span>
             <span className={styles.python}>#python</span>
@@ -39,7 +33,11 @@ export default function PostCard({ post_data, router }) {
             </button>
           </div>
         </div>
+        {/* <img
+          className={styles.postImage}
+          src={"https://source.unsplash.com/WLUHO9A_xik/400x400"}
+          alt="Blog-Pic"
+        /> */}
       </div>
-    </div>
   );
 }

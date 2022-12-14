@@ -29,11 +29,6 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSubscribeCard}>
-            {/* <div className={styles.subscribe}>
-              <h3>Get Notification</h3>
-              <input type="email" placeholder="Enter email.." />
-              <button>subscribe</button>
-            </div> */}
             <div className={styles.copyRight}>
               <span>@{year} ProximaKube. All rights reserved.</span>
             </div>

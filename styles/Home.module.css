@@ -3,28 +3,24 @@
 /* React Default CSS */
 
 .container {
-  padding: 0 2rem;
-  width: 100%;
-  min-width: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 360px;
+    /* background-color: red; */
 }
 
 .main {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1280px;
+    background-color: green;
+    padding: 5px;
 }
 
 
-.grid{
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-auto-rows: auto;
-  row-gap: 0.1rem;
-  column-gap: 0.1rem;
-  justify-content: stretch;
-  align-items: flex-start;
+.BlogPostGrid{
+  max-width: 60%;
 }
 
 /* Card Animation */
@@ -44,7 +40,6 @@
       transition: 0.5s all linear;
 }
 
-
 .borderAnimate:hover::before{
     content: '';
     position: absolute;
@@ -54,7 +49,6 @@
     background: linear-gradient(#00ccff, #d400d4);
     animation: animate 4s linear infinite;
 }
-
 
 .borderAnimate::after{
     content: "";
@@ -78,14 +72,15 @@
 /* Home Blog Posts */
 
 .postCard{
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 0.1rem;
+    margin: 0.2rem 0;
     overflow: hidden;
-    z-index: 1;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .postCard:hover h3{
@@ -99,14 +94,10 @@
 }
 
 
-/* .postImage{
-    width: 100%;
-    height: 50%;
-} */
-
 .postCardBody{
     padding: 0.2rem 0.8rem;
     background-color: aliceblue;
+    width: 100%;
 }
 
 .postCardBody h3{
@@ -121,7 +112,6 @@
 
 .postDescription{
     margin: 0.2rem 0rem;
-    min-height: 2.5rem;
     color: rgb(71, 69, 69);
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
@@ -130,7 +120,6 @@
 
 .postTags{
     margin: 0.2rem 0rem;
-    min-height: 2rem;
     padding: 5px;
     display: flex;
     justify-content: flex-start;
@@ -203,3 +192,37 @@
     background-color: black;
     color: aqua;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .BlogPostGrid{
+        max-width: 100%;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+
+}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+
+} */ 
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+
+} */
+
